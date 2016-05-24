@@ -26,5 +26,11 @@
 ;; Enable backspace key
 (global-set-key "\C-h" 'delete-backward-char)
 
+;; Set proxy(if use)
+(setq url-proxy-services
+      '(("http" . "proxyserver:port")
+        ("https" . "proxyserver:port")))
+
+
 ;; Set font
 (set-frame-font "ricty-9")
