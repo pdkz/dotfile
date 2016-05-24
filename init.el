@@ -43,7 +43,7 @@
 (require 'auto-complete-clang-async)
 (ac-config-default)
 
-(add-hook 'c++-mode-common-hook
+(add-hook 'c++-mode-hook
           '(lambda()
              (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
              (setq ac-sources '(ac-source-clang-async))
@@ -55,7 +55,7 @@
   (define-key ac-complete-mode-map "\C-n" 'ac-next)
   (define-key ac-complete-mode-map "\C-p" 'ac-previous)
   (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-  (add-hook 'c++-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'c++-mode-hook 'ac-cc-mode-setup)
   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
   (global-auto-complete-mode t))
 (my-ac-config)
