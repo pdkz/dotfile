@@ -1,3 +1,6 @@
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/popup")
+
 ;; Disable startup screen
 (setq inhibit-startup-screen t)
 
@@ -31,6 +34,10 @@
       '(("http" . "proxyserver:port")
         ("https" . "proxyserver:port")))
 
-
 ;; Set font
 (set-frame-font "ricty-9")
+
+;; Set auto-complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
